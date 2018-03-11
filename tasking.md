@@ -4,7 +4,7 @@ POKER HANDS
 2H 3D 5S 9C KD 2C 3H 4S 8C AH
 Player 2 wins
 
-2. one pair > high cards
+2. one pair > high cards - done
 2H 2D 5S 9C KD 2C 3H 4S 8C AH
 Player 1 wins
 
