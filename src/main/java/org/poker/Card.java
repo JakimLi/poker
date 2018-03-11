@@ -7,7 +7,7 @@ import static org.poker.Card.Colored.colored;
 
 class Card implements Comparable<Card> {
 
-    private final int value;
+    final int value;
     private final Suit suit;
 
     Card(String card) {

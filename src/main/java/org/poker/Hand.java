@@ -5,10 +5,11 @@ import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 import static java.util.Comparator.reverseOrder;
+import static org.poker.Rank.rank;
 
 class Hand implements Comparable<Hand> {
 
-    private List<Card> cards;
+    List<Card> cards;
 
     Hand(List<Card> cards) {
         this.cards = cards.stream()
@@ -18,7 +19,15 @@ class Hand implements Comparable<Hand> {
 
     @Override
     public int compareTo(Hand hand) {
-        return compareHighCard(hand);
+        int ranking = rank(this).compareTo(rank(hand));
+        if (same(ranking)) {
+            return compareHighCard(hand);
+        }
+        return ranking;
+    }
+
+    private boolean same(int rank) {
+        return rank == 0;
     }
 
     private Integer compareHighCard(Hand hand) {
