@@ -44,7 +44,7 @@ Player 2 wins
 3C 4D 5C 6C 7D 4C 5H 6C 7D 8H
 Player 2 wins
 
-12. flush > straight
+12. flush > straight - done
 3C 8C 5C 6C JC 4C 5H 6C 7D 8H
 Player 1 wins
 
