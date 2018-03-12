@@ -38,7 +38,12 @@ public class PokerTest {
     }
 
     @Test
-    public void two_pair__highest_pair_same_second_higher_pair_win() throws Exception {
+    public void two_pair_highest_pair_same_second_higher_pair_win() throws Exception {
         assertThat(new Poker("2H 2D 9S 9C KD 3C 3H 9H 9D AH").winner(), is(2));
+    }
+    
+    @Test
+    public void both_two_pair_same_higher_card_win() throws Exception {
+        assertThat(new Poker("3C 3D 9S 9C KD 3C 3H 9H 9D AH").winner(), is(2));
     }
 }
