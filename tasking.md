@@ -32,12 +32,12 @@ Player 2 wins
 3C 3D 3C 9C AD 4C 4H 9H 9D AH
 player 1 wins
 
-9. three of kind higher win
+9. three of kind higher win - done
 3C 3D 3C 9C 8D 4C 4H 4C 9D AH
 Player 2 wins
 
 10. straight > three of kind
-3C 3D 3C 9K 9A 4C 5H 6C 7D 8H
+3C 3D 3C 9C AD 4C 5H 6C 7D 8H
 Player 2 wins
 
 11. two straights higher wins

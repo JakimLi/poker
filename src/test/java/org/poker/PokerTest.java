@@ -56,4 +56,9 @@ public class PokerTest {
     public void both_three_of_kind_higher_win() throws Exception {
         assertThat(new Poker("3C 3D 3C 9C 8D 4C 4H 4C 9D AH").winner(), is(2));
     }
+
+    @Test
+    public void straight_wins_on_three_of_kind() throws Exception {
+        assertThat(new Poker("3C 3D 3C 9C AD 4C 5H 6C 7D 8H").winner(), is(2));
+    }
 }
