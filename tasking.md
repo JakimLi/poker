@@ -72,6 +72,6 @@ Player 2 wins
 5C 6C 7C 8C 9C 4H 4D 4C 4S QD
 Player 1 wins
 
-19. two straight flush higher wins
+19. two straight flush higher wins - done
 5C 6C 7C 8C 9C 7H 8H 9H 10H JH
 Player 2 wins
