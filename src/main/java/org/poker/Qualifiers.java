@@ -9,9 +9,9 @@ import static java.lang.Math.abs;
 import static java.util.Arrays.stream;
 
 class Qualifiers {
-    static Qualifier shape(int... shape) {
+    static Qualifier shape(Integer... shape) {
         return hand -> {
-            String expected = stream(shape).mapToObj(String::valueOf).collect(Collectors.joining());
+            String expected = stream(shape).map(String::valueOf).collect(Collectors.joining());
             return hand.shape().equals(expected);
         };
     }
