@@ -40,7 +40,7 @@ class Hand implements Comparable<Hand> {
 
     private Integer compareHighCard(Hand hand) {
         return IntStream.range(0, 5)
-                .mapToObj(index -> cards.get(index).compareTo(hand.cards.get(index)))
+                .map(index -> cards.get(index).compareTo(hand.cards.get(index)))
                 .filter(integer -> integer != 0)
                 .findFirst()
                 .orElse(0);
