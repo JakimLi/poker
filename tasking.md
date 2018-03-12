@@ -36,12 +36,12 @@ player 1 wins
 3C 3D 3C 9C 8D 4C 4H 4C 9D AH
 Player 2 wins
 
-10. straight > three of kind
+10. straight > three of kind - done
 3C 3D 3C 9C AD 4C 5H 6C 7D 8H
 Player 2 wins
 
-11. two straights higher wins
-3C 4D 5C 6K 7A 4C 5H 6C 7D 8H
+11. two straights higher wins - done
+3C 4D 5C 6C 7D 4C 5H 6C 7D 8H
 Player 2 wins
 
 12. flush > straight
