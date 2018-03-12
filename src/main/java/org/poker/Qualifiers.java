@@ -2,9 +2,7 @@ package org.poker;
 
 import org.poker.Rank.Qualifier;
 
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 import java.util.stream.Collectors;
 
 import static java.lang.Math.abs;
@@ -28,11 +26,9 @@ class Qualifiers {
     }
 
     static Qualifier sameSuit() {
-        return hand -> {
-            Set<Card.Suit> suits = new HashSet<>();
-            hand.cards.forEach(card -> suits.add(card.suit));
-            return suits.size() == 1;
-        };
+        return hand -> hand.cards.stream()
+                .map(card -> card.suit)
+                .collect(Collectors.toSet()).size() == 1;
     }
 
     static Qualifier compose(Qualifier... qualifiers) {
