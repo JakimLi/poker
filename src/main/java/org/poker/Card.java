@@ -7,8 +7,8 @@ import static org.poker.Card.Face.face;
 
 class Card implements Comparable<Card> {
 
-    final int value;
-    final Suit suit;
+    private final int value;
+    private final Suit suit;
 
     Card(String card) {
         value = value(card.substring(0, 1));

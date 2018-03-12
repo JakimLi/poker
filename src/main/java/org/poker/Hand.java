@@ -12,7 +12,7 @@ import static org.poker.Rank.rank;
 
 class Hand implements Comparable<Hand> {
 
-    final List<Card> cards;
+    private final List<Card> cards;
 
     private final Map<Integer, Integer> counts = new HashMap<>();
 
@@ -20,7 +20,7 @@ class Hand implements Comparable<Hand> {
         count(cards);
         this.cards = cards.stream()
                 .sorted(reverseOrder())
-                .sorted((card1, card2) -> counts.get(card2.value) - counts.get(card1.value))
+                .sorted((card1, card2) -> counts.get(card2.value()) - counts.get(card1.value()))
                 .collect(Collectors.toList());
     }
 
