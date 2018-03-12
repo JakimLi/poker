@@ -1,5 +1,7 @@
 package org.poker;
 
+import org.poker.Rank.Qualifier;
+
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -9,7 +11,7 @@ import static java.util.Arrays.stream;
 import static java.util.stream.Collectors.joining;
 
 class Qualifiers {
-    static Rank.Qualifier shape(int... shape) {
+    static Qualifier shape(int... shape) {
         return hand -> {
             String cards = hand.counts.values().stream().map(String::valueOf).collect(joining());
             String expected = stream(shape).mapToObj(String::valueOf).collect(Collectors.joining());
@@ -17,14 +19,14 @@ class Qualifiers {
         };
     }
 
-    static Rank.Qualifier consecutive() {
+    static Qualifier consecutive() {
         return hand -> {
             List<Card> cards = hand.cards;
             return cards.get(0).value - cards.get(cards.size() - 1).value == cards.size() - 1;
         };
     }
 
-    static Rank.Qualifier sameSuit() {
+    static Qualifier sameSuit() {
         return hand -> {
             Set<Card.Suit> suits = new HashSet<>();
             hand.cards.forEach(card -> suits.add(card.suit));
@@ -32,7 +34,7 @@ class Qualifiers {
         };
     }
 
-    static Rank.Qualifier compose(Rank.Qualifier... qualifiers) {
+    static Qualifier compose(Qualifier... qualifiers) {
         return hand -> stream(qualifiers).allMatch(qualifier -> qualifier.qualify(hand));
     }
 }
