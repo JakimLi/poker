@@ -12,11 +12,11 @@ Player 1 wins
 2H 2D 5S 9C KD 3C 3H 4S 8C AH
 Player 2 wins
 
-4. two pair > one pair
+4. two pair > one pair - done
 2H 2D 5S 9C KD 3C 3H 4S 4C AH
 Player 2 wins
 
-5. two pair highest win
+5. two pair highest win - done
 2H 2D 9S 9C KD 3C 3H 4S 4C AH
 Player 1 wins
 

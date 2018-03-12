@@ -10,16 +10,16 @@ public enum Rank {
     TWO_PAIR(2, 2, 1);
 
 
-    private int[] qualifier;
+    private int[] shape;
 
-    Rank(int... qualifier) {
-        this.qualifier = qualifier;
+    Rank(int... shape) {
+        this.shape = shape;
     }
 
     static Rank rank(Hand hand) {
         return stream(Rank.values())
                 .sorted(reverseOrder())
-                .filter(rank -> hand.match(rank.qualifier))
+                .filter(rank -> hand.match(rank.shape))
                 .findFirst()
                 .orElse(HIGH);
     }

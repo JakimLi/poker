@@ -31,4 +31,9 @@ public class PokerTest {
     public void two_pair_wins_on_one_pair() throws Exception {
         assertThat(new Poker("2H 2D 5S 9C KD 3C 3H 4S 4C AH").winner(), is(2));
     }
+    
+    @Test
+    public void both_two_pair_highest_win() throws Exception {
+        assertThat(new Poker("2H 2D 9S 9C KD 3C 3H 4S 4C AH").winner(), is(1));
+    }
 }
