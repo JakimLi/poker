@@ -64,7 +64,7 @@ Player 2 wins
 3C 3H 3D 3S 6D 4H 4D 4C QH QD
 Player 1 wins
 
-17. two four of kind higher wins
+17. two four of kind higher wins - done
 3C 3H 3D 3S 6D 4H 4D 4C 4S QD
 Player 2 wins
 
