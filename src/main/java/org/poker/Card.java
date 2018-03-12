@@ -1,8 +1,8 @@
 package org.poker;
 
-import java.util.Arrays;
 import java.util.Optional;
 
+import static java.util.Arrays.stream;
 import static org.poker.Card.Colored.colored;
 
 class Card implements Comparable<Card> {
@@ -15,6 +15,11 @@ class Card implements Comparable<Card> {
         suit = suit(card.substring(1, 2));
     }
 
+    @Override
+    public int compareTo(Card o) {
+        return this.value - o.value;
+    }
+
     private Suit suit(String suit) {
         return Suit.valueOf(suit);
     }
@@ -23,11 +28,6 @@ class Card implements Comparable<Card> {
         return colored(value)
                 .map(colored -> colored.value)
                 .orElseGet(() -> Integer.valueOf(value));
-    }
-
-    @Override
-    public int compareTo(Card o) {
-        return this.value - o.value;
     }
 
     enum Suit {
@@ -45,9 +45,9 @@ class Card implements Comparable<Card> {
             this.symbol = symbol;
         }
 
-        static Optional<Colored> colored(String value) {
-            return Arrays.stream(Colored.values())
-                    .filter(v -> value.equals(v.symbol))
+        static Optional<Colored> colored(String symbol) {
+            return stream(Colored.values())
+                    .filter(card -> symbol.equals(card.symbol))
                     .findFirst();
         }
     }

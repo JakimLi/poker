@@ -11,8 +11,8 @@ class Poker {
     private final Hand second;
 
     Poker(String cards) {
-        first = new Hand(first5(cards(cards)));
-        second = new Hand(last5(cards(cards)));
+        first = new Hand(first5(of(cards)));
+        second = new Hand(last5(of(cards)));
     }
 
     private List<Card> last5(List<Card> cards) {
@@ -23,7 +23,7 @@ class Poker {
         return cards.stream().limit(5).collect(Collectors.toList());
     }
 
-    private List<Card> cards(String cards) {
+    private List<Card> of(String cards) {
         return stream(cards.split(" ")).map(Card::new).collect(Collectors.toList());
     }
 
