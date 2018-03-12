@@ -7,6 +7,7 @@ import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 import static java.util.Comparator.reverseOrder;
+import static java.util.stream.Collectors.joining;
 import static org.poker.Rank.rank;
 
 class Hand implements Comparable<Hand> {
@@ -27,6 +28,10 @@ class Hand implements Comparable<Hand> {
     public int compareTo(Hand hand) {
         int ranking = rank(this).compareTo(rank(hand));
         return same(ranking) ? compareHighCard(hand) : ranking;
+    }
+
+    public String shape() {
+        return this.counts.values().stream().map(String::valueOf).collect(joining());
     }
 
     private boolean same(int rank) {

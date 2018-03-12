@@ -7,14 +7,12 @@ import java.util.stream.Collectors;
 
 import static java.lang.Math.abs;
 import static java.util.Arrays.stream;
-import static java.util.stream.Collectors.joining;
 
 class Qualifiers {
     static Qualifier shape(int... shape) {
         return hand -> {
-            String cards = hand.counts.values().stream().map(String::valueOf).collect(joining());
             String expected = stream(shape).mapToObj(String::valueOf).collect(Collectors.joining());
-            return cards.equals(expected);
+            return hand.shape().equals(expected);
         };
     }
 
