@@ -56,7 +56,7 @@ Player 2 wins
 3C 3H 3D 6C 6D 4H 9H JH QH AH
 Player 1 wins
 
-15. two full house higher wins
+15. two full house higher wins - done
 3C 3H 3D 6C 6D 4H 4D 4C QH QD
 Player 2 wins
 

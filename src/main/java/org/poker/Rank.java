@@ -17,7 +17,8 @@ public enum Rank {
     THREE_OF_KIND(shape(3, 1, 1)),
     STRAIGHT(both(shape(1, 1, 1, 1, 1), consecutive())),
     FLUSH(sameSuit()),
-    FULL_HOUSE(shape(3, 2));
+    FULL_HOUSE(shape(3, 2)),
+    FOUR_OF_KIND(shape(4, 1));
 
     private Qualifier qualifier;
 
