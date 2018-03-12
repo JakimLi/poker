@@ -20,6 +20,14 @@ class Card implements Comparable<Card> {
         return this.value - o.value;
     }
 
+    Integer value() {
+        return value;
+    }
+
+    Suit suit() {
+        return suit;
+    }
+
     private Suit suit(String suit) {
         return Suit.valueOf(suit);
     }
@@ -28,14 +36,6 @@ class Card implements Comparable<Card> {
         return face(value)
                 .map(face -> face.value)
                 .orElseGet(() -> Integer.valueOf(value));
-    }
-
-    Integer value() {
-        return value;
-    }
-
-    Suit suit() {
-        return suit;
     }
 
     enum Suit {
