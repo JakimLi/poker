@@ -20,7 +20,7 @@ Player 2 wins
 2H 2D 9S 9C KD 3C 3H 4S 4C AH
 Player 1 wins
 
-6. two pair highest same, second higher win
+6. two pair highest same, second higher win - done
 2H 2D 9S 9C KD 3C 3H 9H 9D AH
 Player 2 wins
 
