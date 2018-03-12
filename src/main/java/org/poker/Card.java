@@ -3,7 +3,7 @@ package org.poker;
 import java.util.Optional;
 
 import static java.util.Arrays.stream;
-import static org.poker.Card.Colored.colored;
+import static org.poker.Card.Face.face;
 
 class Card implements Comparable<Card> {
 
@@ -25,8 +25,8 @@ class Card implements Comparable<Card> {
     }
 
     private int value(String value) {
-        return colored(value)
-                .map(colored -> colored.value)
+        return face(value)
+                .map(face -> face.value)
                 .orElseGet(() -> Integer.valueOf(value));
     }
 
@@ -34,19 +34,19 @@ class Card implements Comparable<Card> {
         S, H, C, D
     }
 
-    enum Colored {
+    enum Face {
         TEN(10, "T"), JACK(11, "J"), QUEEN(12, "Q"), KING(13, "K"), ACE(14, "A");
 
         private int value;
         private String symbol;
 
-        Colored(int value, String symbol) {
+        Face(int value, String symbol) {
             this.value = value;
             this.symbol = symbol;
         }
 
-        static Optional<Colored> colored(String symbol) {
-            return stream(Colored.values())
+        static Optional<Face> face(String symbol) {
+            return stream(Face.values())
                     .filter(card -> symbol.equals(card.symbol))
                     .findFirst();
         }
