@@ -6,7 +6,8 @@ import static java.util.Comparator.reverseOrder;
 public enum Rank {
 
     HIGH(1, 1, 1, 1, 1),
-    ONE_PAIR(2, 1, 1, 1);
+    ONE_PAIR(2, 1, 1, 1),
+    TWO_PAIR(2, 2, 1);
 
 
     private int[] qualifier;
