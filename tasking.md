@@ -48,11 +48,11 @@ Player 2 wins
 3C 8C 5C 6C JC 4C 5H 6C 7D 8H
 Player 1 wins
 
-13. two flush higher wins
+13. two flush higher wins - done
 3C 8C 5C 6C JC 4H 9H JH QH AH
 Player 2 wins
 
-14. Full house > flush
+14. Full house > flush - done
 3C 3H 3D 6C 6D 4H 9H JH QH AH
 Player 1 wins
 

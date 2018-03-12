@@ -76,4 +76,9 @@ public class PokerTest {
     public void two_flush_higher_wins_straight() throws Exception {
         assertThat(new Poker("3C 8C 5C 6C JC 4H 9H JH QH AH").winner(), is(2));
     }
+
+    @Test
+    public void full_house_wins_on_flush() throws Exception {
+        assertThat(new Poker("3C 3H 3D 6C 6D 4H 9H JH QH AH").winner(), is(1));
+    }
 }
