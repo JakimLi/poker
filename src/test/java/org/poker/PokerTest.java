@@ -66,4 +66,9 @@ public class PokerTest {
     public void two_straight_higher_wins() throws Exception {
         assertThat(new Poker("3C 4D 5C 6C 7D 4C 5H 6C 7D 8H").winner(), is(2));
     }
+
+    @Test
+    public void flush_wins_straight() throws Exception {
+        assertThat(new Poker("3C 8C 5C 6C JC 4C 5H 6C 7D 8H").winner(), is(1));
+    }
 }

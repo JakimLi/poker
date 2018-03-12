@@ -8,7 +8,7 @@ import static org.poker.Card.Colored.colored;
 class Card implements Comparable<Card> {
 
     final int value;
-    private final Suit suit;
+    final Suit suit;
 
     Card(String card) {
         value = value(card.substring(0, 1));
