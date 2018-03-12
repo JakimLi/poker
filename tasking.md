@@ -24,12 +24,12 @@ Player 1 wins
 2H 2D 9S 9C KD 3C 3H 9H 9D AH
 Player 2 wins
 
-7. two pair all same, high card win
+7. two pair all same, high card win - done
 3C 3D 9S 9C KD 3C 3H 9H 9D AH
 Player 2 wins
 
 8. three of kind > two pairs
-3C 3D 3C 9K 9A 4C 4H 9H 9D AH
+3C 3D 3C 9C AD 4C 4H 9H 9D AH
 player 1 wins
 
 9. three of kind higher win

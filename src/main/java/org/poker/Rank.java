@@ -7,8 +7,8 @@ public enum Rank {
 
     HIGH(1, 1, 1, 1, 1),
     ONE_PAIR(2, 1, 1, 1),
-    TWO_PAIR(2, 2, 1);
-
+    TWO_PAIR(2, 2, 1),
+    THREE_OF_KIND(3, 1, 1);
 
     private int[] shape;
 
