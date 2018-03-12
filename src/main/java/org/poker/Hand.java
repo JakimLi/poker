@@ -48,8 +48,12 @@ class Hand implements Comparable<Hand> {
 
     private void count(List<Card> cards) {
         cards.forEach(card -> {
-            Integer integer = counts.get(card.value);
-            counts.put(card.value, (integer == null ? 0 : integer) + 1);
+            Integer integer = counts.get(card.value());
+            counts.put(card.value(), (integer == null ? 0 : integer) + 1);
         });
+    }
+
+    List<Card> cards() {
+        return cards;
     }
 }

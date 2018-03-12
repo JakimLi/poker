@@ -30,6 +30,14 @@ class Card implements Comparable<Card> {
                 .orElseGet(() -> Integer.valueOf(value));
     }
 
+    Integer value() {
+        return value;
+    }
+
+    Suit suit() {
+        return suit;
+    }
+
     enum Suit {
         S, H, C, D
     }

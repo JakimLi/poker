@@ -19,14 +19,14 @@ class Qualifiers {
 
     static Qualifier consecutive() {
         return hand -> {
-            List<Card> cards = hand.cards;
-            return abs(cards.get(0).value - cards.get(cards.size() - 1).value) == cards.size() - 1;
+            List<Card> cards = hand.cards();
+            return abs(cards.get(0).value() - cards.get(cards.size() - 1).value()) == cards.size() - 1;
         };
     }
 
     static Qualifier sameSuit() {
-        return hand -> hand.cards.stream()
-                .map(card -> card.suit)
+        return hand -> hand.cards().stream()
+                .map(Card::suit)
                 .collect(Collectors.toSet()).size() == 1;
     }
 
