@@ -45,6 +45,10 @@ class Hand implements Comparable<Hand> {
         return this.cards.get(this.cards.size() - 1);
     }
 
+    List<Card> cards() {
+        return cards;
+    }
+
     private boolean same(int rank) {
         return rank == 0;
     }
@@ -62,9 +66,5 @@ class Hand implements Comparable<Hand> {
             Integer integer = counts.get(card.value());
             counts.put(card.value(), (integer == null ? 0 : integer) + 1);
         });
-    }
-
-    List<Card> cards() {
-        return cards;
     }
 }
