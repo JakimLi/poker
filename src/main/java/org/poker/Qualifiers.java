@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
+import static java.lang.Math.abs;
 import static java.util.Arrays.stream;
 import static java.util.stream.Collectors.joining;
 
@@ -22,7 +23,7 @@ class Qualifiers {
     static Qualifier consecutive() {
         return hand -> {
             List<Card> cards = hand.cards;
-            return cards.get(0).value - cards.get(cards.size() - 1).value == cards.size() - 1;
+            return abs(cards.get(0).value - cards.get(cards.size() - 1).value) == cards.size() - 1;
         };
     }
 
