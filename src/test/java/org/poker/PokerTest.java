@@ -101,4 +101,9 @@ public class PokerTest {
     public void straight_flush_wins_on_four_of_kind() throws Exception {
         assertThat(new Poker("5C 6C 7C 8C 9C 4H 4D 4C 4S QD").winner(), is(1));
     }
+    
+    @Test
+    public void two_straight_flush_higher_wins() throws Exception {
+        assertThat(new Poker("5C 6C 7C 8C 9C 7H 8H 9H TH JH").winner(), is(2));
+    }
 }

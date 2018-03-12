@@ -68,7 +68,7 @@ Player 1 wins
 3C 3H 3D 3S 6D 4H 4D 4C 4S QD
 Player 2 wins
 
-18. straight flush > four of kind
+18. straight flush > four of kind - done
 5C 6C 7C 8C 9C 4H 4D 4C 4S QD
 Player 1 wins
 

@@ -35,7 +35,7 @@ class Card implements Comparable<Card> {
     }
 
     enum Colored {
-        JACK(11, "J"), QUEEN(12, "Q"), KING(13, "K"), ACE(14, "A");
+        TEN(10, "T"), JACK(11, "J"), QUEEN(12, "Q"), KING(13, "K"), ACE(14, "A");
 
         private int value;
         private String symbol;
