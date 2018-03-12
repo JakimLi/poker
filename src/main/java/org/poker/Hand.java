@@ -14,7 +14,7 @@ class Hand implements Comparable<Hand> {
 
     final List<Card> cards;
 
-    final Map<Integer, Integer> counts = new HashMap<>();
+    private final Map<Integer, Integer> counts = new HashMap<>();
 
     Hand(List<Card> cards) {
         count(cards);
@@ -30,7 +30,7 @@ class Hand implements Comparable<Hand> {
         return same(ranking) ? compareHighCard(hand) : ranking;
     }
 
-    public String shape() {
+    String shape() {
         return this.counts.values().stream().map(String::valueOf).collect(joining());
     }
 
