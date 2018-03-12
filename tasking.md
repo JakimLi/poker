@@ -8,7 +8,7 @@ Player 2 wins
 2H 2D 5S 9C KD 2C 3H 4S 8C AH
 Player 1 wins
 
-3. one pair higer win
+3. one pair higer win - done
 2H 2D 5S 9C KD 3C 3H 4S 8C AH
 Player 2 wins
 

@@ -1,8 +1,12 @@
 package org.poker;
 
+import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
+import java.util.stream.Stream;
 
 import static java.util.Comparator.reverseOrder;
 import static org.poker.Rank.rank;
@@ -11,10 +15,13 @@ class Hand implements Comparable<Hand> {
 
     List<Card> cards;
 
+    private final Map<Integer, Integer> counts = new HashMap<>();
+
     Hand(List<Card> cards) {
         this.cards = cards.stream()
                 .sorted(reverseOrder())
                 .collect(Collectors.toList());
+        count();
     }
 
     @Override
@@ -36,5 +43,29 @@ class Hand implements Comparable<Hand> {
                 .filter(integer -> integer != 0)
                 .findFirst()
                 .orElse(0);
+    }
+
+    boolean match(int[] pattern) {
+        String cards = join(counts.values().stream());
+        return cards.equals(join(pattern));
+    }
+
+    private String join(int[] pattern) {
+        return Arrays.stream(pattern)
+                .mapToObj(String::valueOf)
+                .collect(Collectors.joining());
+    }
+
+    private String join(Stream<Integer> stream) {
+        return stream
+                .map(String::valueOf)
+                .collect(Collectors.joining());
+    }
+
+    private void count() {
+        cards.forEach(card -> {
+            Integer integer = counts.get(card.value);
+            counts.put(card.value, (integer == null ? 0 : integer) + 1);
+        });
     }
 }
