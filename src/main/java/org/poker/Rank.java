@@ -13,11 +13,11 @@ public enum Rank {
     ONE_PAIR(shape(2, 1, 1, 1)),
     TWO_PAIR(shape(2, 2, 1)),
     THREE_OF_KIND(shape(3, 1, 1)),
-    STRAIGHT(compose(shape(1, 1, 1, 1, 1), consecutive())),
+    STRAIGHT(consecutive()),
     FLUSH(sameSuit()),
     FULL_HOUSE(shape(3, 2)),
     FOUR_OF_KIND(shape(4, 1)),
-    STRAIGHT_FLUSH(compose(shape(1, 1, 1, 1, 1), consecutive(), sameSuit()));
+    STRAIGHT_FLUSH(compose(consecutive(), sameSuit()));
 
     private Qualifier qualifier;
 

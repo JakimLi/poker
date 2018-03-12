@@ -2,10 +2,8 @@ package org.poker;
 
 import org.poker.Rank.Qualifier;
 
-import java.util.List;
 import java.util.stream.Collectors;
 
-import static java.lang.Math.abs;
 import static java.util.Arrays.stream;
 import static java.util.stream.Collectors.joining;
 
@@ -18,10 +16,8 @@ class Qualifiers {
     }
 
     static Qualifier consecutive() {
-        return hand -> {
-            List<Card> cards = hand.cards();
-            return abs(cards.get(0).value() - cards.get(cards.size() - 1).value()) == cards.size() - 1;
-        };
+        return compose(shape(1, 1, 1, 1, 1),
+                hand -> hand.max().value() - hand.min().value() == hand.cards().size() - 1);
     }
 
     static Qualifier sameSuit() {

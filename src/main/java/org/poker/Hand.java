@@ -31,7 +31,18 @@ class Hand implements Comparable<Hand> {
     }
 
     String shape() {
-        return this.counts.values().stream().map(String::valueOf).collect(joining());
+        return this.counts.values()
+                .stream()
+                .map(String::valueOf)
+                .collect(joining());
+    }
+
+    Card max() {
+        return this.cards.get(0);
+    }
+
+    Card min() {
+        return this.cards.get(this.cards.size() - 1);
     }
 
     private boolean same(int rank) {
