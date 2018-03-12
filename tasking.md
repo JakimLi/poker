@@ -60,7 +60,7 @@ Player 1 wins
 3C 3H 3D 6C 6D 4H 4D 4C QH QD
 Player 2 wins
 
-16. Four of a kind > full house
+16. Four of a kind > full house - done
 3C 3H 3D 3S 6D 4H 4D 4C QH QD
 Player 1 wins
 
