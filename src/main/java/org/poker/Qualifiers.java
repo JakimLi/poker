@@ -9,10 +9,8 @@ import static java.util.stream.Collectors.joining;
 
 class Qualifiers {
     static Qualifier shape(Integer... shape) {
-        return hand -> {
-            String expected = stream(shape).map(String::valueOf).collect(joining());
-            return hand.shape().equals(expected);
-        };
+        String expected = stream(shape).map(String::valueOf).collect(joining());
+        return hand -> hand.shape().equals(expected);
     }
 
     static Qualifier consecutive() {
